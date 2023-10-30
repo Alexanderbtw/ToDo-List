@@ -1,0 +1,130 @@
+﻿html, body {
+    margin-top: 30px;
+    padding: 0;
+    min-width: 1000px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(244, 244, 244);
+}
+
+.fixed-container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+    .fixed-container h2 {
+        font-weight: normal;
+    }
+
+#left-column {
+    float: left;
+    width: 470px;
+}
+
+.task-item {
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.task-id
+{
+    display: none;
+}
+
+.task-item-title {
+    font-weight: normal;
+    border-bottom: 1px solid rgb(244, 244, 244);
+    font-size: 18px;
+    padding: 1em 0 1em 15px;
+    position: relative;
+}
+
+    .task-item-title button {
+        height: 1em;
+        width: 1em;
+        border: none;
+        background-repeat: no-repeat;
+        background-color: white;
+        background-size: 1em;
+        padding: 0;
+    }
+
+.del-btn {
+    background-image: url('../img/del-icon.png');
+    margin-left: 10px;
+}
+
+.hide-btn {
+    background-image: url('../img/hide-icon.png');
+    position: absolute;
+    right: 20px;
+    top: 40%;
+}
+
+.rotate-90 {
+    transition: transform 0.5s;
+    transform: rotate(90deg);
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+.rotate-min-90 {
+    transition: transform 0.5s;
+    border-spacing: inherit;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+}
+
+.task-item-desc {
+    color: rgb(103, 103, 133);
+    padding: 1em 1em 1em 15px;
+    min-height: 60px;
+}
+
+#right-column {
+    float: right;
+    width: 470px;
+}
+
+#task-form {
+    background-color: white;
+}
+
+    #task-form label {
+        color: rgb(103, 103, 133);
+        font-size: 18px;
+        display: inline-block;
+        margin: 1em 0 5px 15px;
+    }
+
+#inp-title, #inp-description {
+    margin: 0 15px 0 12px;
+    width: calc(100% - 30px);
+    padding: 3px;
+    border-color: rgb(244, 244, 244);
+    border-width: 2px;
+    border-style: solid;
+}
+
+#inp-title {
+    height: 30px;
+}
+
+#inp-description {
+    height: 300px;
+    resize: none;
+}
+
+#submit-btn {
+    margin: 1em 0 1em 15px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(73, 121, 255);
+    color: white;
+}

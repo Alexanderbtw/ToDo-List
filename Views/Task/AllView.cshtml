@@ -1,0 +1,47 @@
+﻿@using ToDo_List.Models
+@{
+    ViewData["Title"] = "ToDo";
+}
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+    <script src="~/js/code.jquery.com_jquery-3.7.0.js"></script>
+    <script src="~/js/script.js"></script>
+</head>
+<body>
+    <div class="fixed-container">
+        <div id="left-column">
+            <h2>Список дел:</h2>
+            @foreach(MyTask task in ViewBag.Tasks)
+            {
+                <div class="task-item">
+                    <div class="task-id">@task.Id</div>
+                    <div class="task-item-title">
+                        @task.Title
+                        <button class='del-btn'></button>
+                        <button class='hide-btn'></button>
+                    </div>
+                    <div class="for-anim">
+                        <div class="task-item-desc">
+                            @task.Description
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div id="right-column">
+            <h2>Добавить новое дело</h2>
+            <form id="task-form" method="post" action="~/Task/AddTask">
+                <label for="inp-title">* Название</label><br>
+                <input name="inp_title" type="text" required id="inp-title"><br>
+                <label for="inp-description">* Описание</label><br>
+                <textarea name="inp_desc" required id="inp-description"></textarea><br>
+                <button type="submit" form="task-form" id="submit-btn">Добавить дело</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
